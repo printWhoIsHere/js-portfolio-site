@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Style Switcher -->
+	<link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1">
+	<link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+	<link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+	<link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+	<link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+	<div class="main-wrapper"	>
+		<div class="aside">
+			<div class="logo">
+				<img src="./images/logo-printwhoishere.png" alt="printwhoishere">
+				<a href="https://github.com/printWhoIsHere">printwhoishere</a>
+			</div>
+			<ul class="nav">
+				<li><a href="#" data-id="home" class="active"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="#" data-id="about"><i class="fa fa-user"></i> About</a></li>
+				<li><a href="#" data-id="services"><i class="fa fa-list"></i>Services</a></li>
+				<li><a href="#" data-id="portfolio"><i class="fa fa-book-bookmark"></i>Portfolio</a></li>
+				<li><a href="#" data-id="contact"><i class="fa fa-envelope"></i>Contacts</a></li>
+			</ul>
+		</div>
+
+		<div class="main-content">
+
+			<section class="home section" id="particles-js">
+				<div class="container">
+					<div class="row">
+						<div class="home-info py-15">
+							<h3 class="hello">Hi there, I'm <span class="name">printwhoishere</span></h3>
+							<h3 class="my-profession">I am a <span class="typewrite py-15"></span></span></h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iusto dolorem nostrum natus eos doloribus, excepturi mollitia quibusdam. Delectus modi aliquid repellendus consectetur perspiciatis eum! Nesciunt consequuntur itaque aperiam aut.</p>
+							<a href="#" class="btn more-about-me">More About Me</a>
+						</div>
+						<div class="home-img py-15">
+							<img src="/images/astronaut.png" alt="photo">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about section hidden">
+				<div class="container">
+					<div class="row">
+						<div class="section-title py-15">
+							<h2>About Me</h2>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="about-content py-15">
+							<div class="row">
+								<div class="about-text py-15">
+									<h3>Lorem ipsum dolor sit amet consectetur <span>adipisicing elit.</span></h3>
+									<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, a blanditiis dolor in minus eaque aliquam expedita rerum id. Repellendus vel est, autem dolore non accusamus mollitia quos, officia voluptatibus accusantium dolores quam qui laborum cumque, natus doloribus ea incidunt quo velit aut blanditiis ducimus nobis dolor consequatur. Vero eius ex architecto tempore perspiciatis enim.</p>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="personal-info py-15">
+									<div class="row">
+										<!-- Info -->
+									</div>
+									<div class="row">
+										<div class="buttons py-15">
+											<a href="./assets/resume.txt" class="btn" download="">Download resume</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="languages py-15">
+									<div class="row">
+										<!-- Languages Items -->
+									</div>
+								</div>
+							</div>
+
+							
+							<div class="row">
+								<div class="education py-15">
+									<h3 class="title">Education</h3>
+									<div class="row">
+										<div class="timeline-box py-15">
+											<div class="timeline shadow-dark ">
+												<!-- Timeline Items -->
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="experience py-15">
+									<h3 class="title">Experience</h3>
+									<div class="row">
+										<div class="timeline-box py-15">
+											<div class="timeline shadow-dark ">
+												<!-- Timeline Items -->
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="contact section hidden">
+				<div class="container">
+					<div class="row">
+						<div class="section-title py-15">
+							<h2>Contact Me</h2>
+						</div>
+					</div>
+					
+					<!-- Contact Form -->
+					<div class="row">
+						<form id="tg-feedback" class="contact-form py-15" action="">
+							<div class="row">
+
+								<div class="form-item col-6 py-15">
+									<div class="form-group">
+										<input type="text" name="name" class="form-control" placeholder="Name" required>
+									</div>
+								</div>
+
+								<div class="form-item col-6 py-15">
+									<div class="form-group">
+										<input type="text" name="phone" class="form-control" placeholder="+7 (000) 000-00-00" required>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="row">
+								<div class="form-item">
+									<div class="form-group col-12 py-15">
+										<input type="text" name="subject" class="form-control" placeholder="Subject" required>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-item">
+									<div class="form-group col-12 py-15">
+										<textarea name="message" class="form-control" placeholder="Message" required></textarea>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="form-item col-12 py-15">
+									<button type="submit" class="btn"> Send Message</button>
+								</div>
+							</div>
+							
+						</form>
+					</div>
+					<!-- END Contact Form -->
+				</div>
+						
+					
+				<div id="successMessage" class="alert alert-success">Message complete! <i class="fa-solid fa-check"></i></div>
+
+			</section>
+
+		</div>
+	</div>
+
+	<!-- Switch Buttons -->
+	<div class="switch-buttons">
+		<div class="buttons">
+			<div class="switch-button s-icon style-switcher">
+				<i class="fas fa-cog"></i>
+			</div>
+			<div class="switch-button s-icon day-night ">
+				<i class="fas fa-sun"></i>
+			</div>
+			<div class="switch-button s-icon github">
+				<i class="fa-brands fa-github"></i>
+			</div>
+		</div>
+		<div class="color-theme">
+			<h4>Theme Colors</h4>
+			<div class="colors">
+				<span class="color-1" onclick="setActiveStyle('color-1')"></span>
+				<span class="color-2" onclick="setActiveStyle('color-2')"></span>
+				<span class="color-3" onclick="setActiveStyle('color-3')"></span>
+				<span class="color-4" onclick="setActiveStyle('color-4')"></span>
+				<span class="color-5" onclick="setActiveStyle('color-5')"></span>
+			</div>
+		</div>
+	</div>
+
+	<!-- JS Files -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+	<script type="module" src="./js/index.js" defer></script>
+	<script src="./js/switch-buttons.js" defer></script>
+</body>
+</html>

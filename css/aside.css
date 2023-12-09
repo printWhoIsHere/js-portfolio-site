@@ -1,0 +1,97 @@
+/* ASIDE */
+.aside {
+	width: 270px;
+	background: var(--bg-black-100);
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding: 30px;
+	height: 100%;
+	box-shadow: 15px 0px 8px 0px rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+.aside .logo {
+	position: absolute;
+	top: 50px;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.aside .logo a {
+	color: var(--text-black-900);
+	font-weight: 700;
+	padding: 15px 20px;
+	font-size: 20px;
+	letter-spacing: 3px;
+	font-family: 'Nova Square', sans-serif;
+	position: relative;
+}
+.aside .logo img {
+	width: 50px;
+	height: 50px;
+	margin-right: -20px;
+}
+.aside .nav-toggler {
+	height: 40px;
+	width: 45px;
+	border: 1px solid var(--bg-black-50);
+	cursor: pointer;
+	position: fixed;
+	left: 300px;
+	top: 20px;
+	border-radius: 5px;
+	background: var(--bg-black-100);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.aside .nav-toggler span {
+	height: 2px;
+	width: 18px;
+	background: var(--skin-color);
+	display: inline-block;
+	position: relative;
+}
+.aside .nav-toggler span::before {
+	content: '';
+	height: 2px;
+	width: 18px;
+	background: var(--skin-color);
+	position: absolute;
+	top: -6px;
+	left: 0;
+}
+.aside .nav-toggler span::after {
+	content: '';
+	height: 2px;
+	width: 18px;
+	background: var(--skin-color);
+	position: absolute;
+	top: 6px;
+	left: 0;
+}
+.aside .nav {
+	margin-top: 50px;
+}
+.aside .nav li {
+	margin-bottom: 20px;
+	display: block;
+}
+.aside .nav li a {
+	font-size: 16px;
+	font-weight: 600;
+	display: block;
+	border-bottom: 1px solid var(--bg-black-50);
+	color: var(--text-black-900);
+	padding: 5px 15px;
+}
+.aside .nav li a.active {
+	color: var(--skin-color);
+}
+.aside .nav li a i {
+	margin-right: 15px;
+}
