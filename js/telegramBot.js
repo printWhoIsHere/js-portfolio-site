@@ -4,18 +4,25 @@ const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`
 
 const succesMessage = document.getElementById('successMessage')
 
-export default function tgBot() {
+export default function telegramBot() {
   document
     .getElementById('tg-feedback')
     .addEventListener('submit', function (event) {
       event.preventDefault()
 
-      let message = `<b>Сообщение от ${new Date().toLocaleString()}</b>\n`
-      message += `<b>Отправитель: ${this.name.value}</b>\n`
-      message += `<b>Телефон: ${this.phone.value}</b>\n`
-      message += `<b>Тема: ${this.subject.value}</b>\n`
-      message += `<b>Сообщение: ${this.message.value}</b>\n`
-      console.log(message)
+      const formData = {
+        name: this.name.value,
+        phone: this.phone.value,
+        subject: this.subject.value,
+        message: this.message.value,
+      }
+
+      const message =
+        `<b>Сообщение от ${new Date().toLocaleString()}</b>\n` +
+        `<i>Отправитель:</i> ${formData.name}\n` +
+        `<i>Телефон:</i> ${formData.phone}\n` +
+        `<i>Тема:</i> ${formData.subject}\n` +
+        `<i>Сообщение:</i> ${formData.message}\n`
 
       axios
         .post(URI_API, {
@@ -24,10 +31,9 @@ export default function tgBot() {
           text: message,
         })
         .then((res) => {
-          this.name.value = ''
-          this.phone.value = ''
-          this.subject.value = ''
-          this.message.value = ''
+          Object.values(formData).forEach((value, index) => {
+            this[Object.keys(formData)[index]].value = ''
+          })
 
           succesMessage.style.display = 'flex'
           setTimeout(function () {

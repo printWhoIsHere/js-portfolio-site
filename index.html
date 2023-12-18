@@ -7,16 +7,11 @@
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="css/style.css">
-	<!-- Style Switcher -->
-	<link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1">
-	<link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
-	<link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
-	<link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
-	<link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
-<body>
+<body  id="particles-js">
 
 	<div class="main-wrapper"	>
 		<div class="aside">
@@ -25,17 +20,17 @@
 				<a href="https://github.com/printWhoIsHere">printwhoishere</a>
 			</div>
 			<ul class="nav">
-				<li><a href="#" data-id="home" class="active"><i class="fa fa-home"></i> Home</a></li>
-				<li><a href="#" data-id="about"><i class="fa fa-user"></i> About</a></li>
-				<li><a href="#" data-id="services"><i class="fa fa-list"></i>Services</a></li>
-				<li><a href="#" data-id="portfolio"><i class="fa fa-book-bookmark"></i>Portfolio</a></li>
-				<li><a href="#" data-id="contact"><i class="fa fa-envelope"></i>Contacts</a></li>
+				<li><a href="#home" data-id="home" class="active"><i class="fa fa-home"></i> Home</a></li>
+				<li><a href="#about" data-id="about"><i class="fa fa-user"></i> About</a></li>
+				<li><a href="#services" data-id="services"><i class="fa fa-list"></i>Services</a></li>
+				<li><a href="#portfolio" data-id="portfolio"><i class="fa fa-book-bookmark"></i>Portfolio</a></li>
+				<li><a href="#contact" data-id="contact"><i class="fa fa-envelope"></i>Contacts</a></li>
 			</ul>
 		</div>
 
 		<div class="main-content">
 
-			<section class="home section" id="particles-js">
+			<section id="home" class="home section">
 				<div class="container">
 					<div class="row">
 						<div class="home-info py-15">
@@ -51,7 +46,7 @@
 				</div>
 			</section>
 
-			<section class="about section hidden">
+			<section id="about" class="about section">
 				<div class="container">
 					<div class="row">
 						<div class="section-title py-15">
@@ -117,12 +112,37 @@
 				</div>
 			</section>
 
-			<section class="contact section hidden">
+			<section id="services" class="services section"></section>
+
+			<section id="portfolio" class="portfolio section ">
+				<div class="container">
+					<div class="row">
+						<div class="section-title py-15">
+							<h2>Portfolio</h2>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="slider">
+							<div class="slider-container">
+								<div class="slider-track">
+									<!-- sliders -->
+								</div>
+							</div>
+							<button class="btn-prev"><i class="fas fa-chevron-left"></i></button>
+							<button class="btn-next"><i class="fas fa-chevron-right"></i></button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="contact" class="contact section">
 				<div class="container">
 					<div class="row">
 						<div class="section-title py-15">
 							<h2>Contact Me</h2>
 						</div>
+						<div id="successMessage" class="alert alert-success">Message complete! <i class="fa-solid fa-check"></i></div>
 					</div>
 					
 					<!-- Contact Form -->
@@ -172,7 +192,6 @@
 				</div>
 						
 					
-				<div id="successMessage" class="alert alert-success">Message complete! <i class="fa-solid fa-check"></i></div>
 
 			</section>
 
@@ -195,11 +214,7 @@
 		<div class="color-theme">
 			<h4>Theme Colors</h4>
 			<div class="colors">
-				<span class="color-1" onclick="setActiveStyle('color-1')"></span>
-				<span class="color-2" onclick="setActiveStyle('color-2')"></span>
-				<span class="color-3" onclick="setActiveStyle('color-3')"></span>
-				<span class="color-4" onclick="setActiveStyle('color-4')"></span>
-				<span class="color-5" onclick="setActiveStyle('color-5')"></span>
+				<!-- colors -->
 			</div>
 		</div>
 	</div>
@@ -207,7 +222,6 @@
 	<!-- JS Files -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" defer></script>
 	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
-	<script type="module" src="./js/index.js" defer></script>
-	<script src="./js/switch-buttons.js" defer></script>
+	<script type="module" src="./js/app.js" defer></script>
 </body>
 </html>

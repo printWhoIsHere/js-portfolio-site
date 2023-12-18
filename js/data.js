@@ -33,6 +33,20 @@ const data = {
       description: 'Lorem ipsum dolor sit, amet.',
     },
   ],
+  sliders: [
+    {
+      link: 'https://github.com/printWhoIsHere',
+      image: 'images/portfolio/slide1.png',
+    },
+    {
+      link: 'https://github.com/printWhoIsHere',
+      image: 'images/portfolio/slide2.png',
+    },
+    {
+      link: 'https://github.com/printWhoIsHere',
+      image: 'images/portfolio/slide3.png',
+    },
+  ],
 }
 
 function getCurrentAge(date) {
@@ -42,48 +56,70 @@ function getCurrentAge(date) {
 }
 
 function dataOutput() {
-  // console.log(data)
+  const personalInfoRow = document.querySelector('.personal-info .row')
+  const languagesRow = document.querySelector('.languages .row')
+  const educationTimeline = document.querySelector('.education .timeline')
+  const experienceTimeline = document.querySelector('.experience .timeline')
+  const portfolioSliderTrack = document.querySelector(
+    '.portfolio .slider-track'
+  )
 
+  // Peronal Info
   for (let key in data.info) {
-    let div = document.createElement('div')
-    div.className = 'info-item py-15'
-    div.innerHTML = `<p>${key} : <span>${data.info[key]}</span></p>`
-    document.querySelector('.personal-info .row').appendChild(div)
+    personalInfoRow.insertAdjacentHTML(
+      'beforeend',
+      `<div class="info-item py-15"><p>${key} : <span>${data.info[key]}</span></p></div>`
+    )
   }
 
+  // Languages
   for (let key in data.languages) {
-    let div = document.createElement('div')
-    div.className = `${key}`
-    div.innerHTML = `<i class="${data.languages[key]}" title="${key}"></i>`
-    document.querySelector('.languages .row').appendChild(div)
+    languagesRow.insertAdjacentHTML(
+      'beforeend',
+      `<div class="${key}"><i class="${data.languages[key]}" title="${key}"></i></div>`
+    )
   }
 
+  // Education Timeline
   data.education.forEach((item) => {
-    let educationItem = document.createElement('div')
-    educationItem.className = 'timeline-item'
-    educationItem.innerHTML = `
-      <div class="circle-dot"></div>
-      <h3 class="timeline-date">
-        <i class="fa fa-calendar"></i> ${item.date}
-      </h3>
-      <h4 class="timeline-title">${item.title}</h4>
-      <p class="timeline-text">${item.description}</p>
+    educationTimeline.insertAdjacentHTML(
+      'beforeend',
       `
-    document.querySelector('.education .timeline').appendChild(educationItem)
+      <div class="timeline-item">
+        <div class="circle-dot"></div>
+        <h3 class="timeline-date"><i class="fa fa-calendar"></i> ${item.date}</h3>
+        <h4 class="timeline-title">${item.title}</h4>
+        <p class="timeline-text">${item.description}</p>
+      </div>
+    `
+    )
   })
 
+  // Experience Timeline
   data.experience.forEach((item) => {
-    let experienceItem = document.createElement('div')
-    experienceItem.className = 'timeline-item'
-    experienceItem.innerHTML = `
-      <div class="circle-dot"></div>
-      <h3 class="timeline-date">
-        <i class="fa fa-calendar"></i> ${item.date}
-      </h3>
-      <h4 class="timeline-title">${item.title}</h4>
-      <p class="timeline-text">${item.description}</p>
+    experienceTimeline.insertAdjacentHTML(
+      'beforeend',
       `
-    document.querySelector('.experience .timeline').appendChild(experienceItem)
+      <div class="timeline-item">
+        <div class="circle-dot"></div>
+        <h3 class="timeline-date"><i class="fa fa-calendar"></i> ${item.date}</h3>
+        <h4 class="timeline-title">${item.title}</h4>
+        <p class="timeline-text">${item.description}</p>
+      </div>
+    `
+    )
+  })
+
+  // Portfolio Sliders
+  data.sliders.forEach((slider) => {
+    portfolioSliderTrack.insertAdjacentHTML(
+      'beforeend',
+      `
+      <div class="slider-item" style="background-image: url('${slider.image}')">
+        <a target="_blank" href="${slider.link}"></a>
+      </div>
+    `
+    )
   })
 }
 

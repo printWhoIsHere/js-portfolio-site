@@ -47,7 +47,6 @@
 
 .switch-buttons .color-theme {
 	width: 250px;
-	height: 100px;
 	background: var(--bg-black-100);	
 	border: 1px solid var(--text-black-900);
 	border-radius: 25px;
@@ -65,7 +64,6 @@
 .switch-buttons .color-theme .colors {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 }
 .switch-buttons .color-theme .colors span {
 	display: inline-block;
@@ -74,20 +72,5 @@
 	border-radius: 50%;
 	border: 1px solid var(--bg-black-50);
 	cursor: pointer;
-}
-
-.switch-buttons .color-1 {
-	background: #ED7D31;
-}
-.switch-buttons .color-2 {
-	background: #EC1839;
-}
-.switch-buttons .color-3 {
-	background: #37B182;
-}
-.switch-buttons .color-4 {
-	background: #1854B4;
-}
-.switch-buttons .color-5 {
-	background: #F021B2;
+	margin: 5px
 }

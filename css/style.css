@@ -1,31 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,900;1,300&display=swap');
 @import './aside.css';
 @import './switch-buttons.css';
-@import './form.css';
 
+/* Variables */
 :root {
 	--bg-black-900: #474745;
 	--bg-black-100: #151515;
 	--bg-black-50: #b6c1c4;
 	--text-black-900: #ccd7d8;
 	--text-black-700: #e3e7eb;
+	--skin-color: #ED7D31;
+
+  --font-weight-light: 200;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
 }
 
-body {
-	margin: 0;
-	padding: 0;
-	line-height: 1.5;
-	font-size: 16px;
-	font-family: 'Roboto', sans-serif;
-}
-body.light {
-	--bg-black-900: #f2f2fc;
-	--bg-black-100: #fdf9ff;
-	--bg-black-50: #e8dfec;
-	--text-black-900: #302e4d;
-	--text-black-700: #504e70;
-}
-
+/* General */
 * {
 	margin: 0;
 	padding: 0;
@@ -38,6 +31,35 @@ body.light {
 	box-sizing: border-box;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	background: var(--bg-black-900);
+}
+
+body.light {
+	--bg-black-900: #f2f2fc;
+	--bg-black-100: #fdf9ff;
+	--bg-black-50: #e8dfec;
+	--text-black-900: #302e4d;
+	--text-black-700: #504e70;
+}
+
+p {
+	color: var(--text-black-700);
+}
+h2 {
+	font-size: 40px;
+}
+h3 {
+	color: var(--text-black-900);
+}
+ul {
+	list-style: none;
+}
 
 .section {
 	background: var(--bg-black-900);
@@ -51,9 +73,6 @@ body.light {
 	padding-left: 270px;
 }
 
-ul {
-	list-style: none;
-}
 
 .py-15 {
 	padding-left: 15px;
@@ -61,10 +80,8 @@ ul {
 }
 
 .particles-js-canvas-el {
-	display: block;
-	position: absolute;
+	position: fixed;
 	width: 100vw;
-	height: 100vh;
 	top: 0;
 	left: 0;
 }
@@ -81,14 +98,7 @@ ul {
 .section-title h2 {
 	font-size: 40px;
 	color: var(--text-black-900);
-	font-weight: 400;
-}
-
-p {
-	color: var(--text-black-700);
-}
-h3 {
-	color: var(--text-black-900);
+	font-weight: var(--font-weight-light);
 }
 
 .container {
@@ -132,7 +142,7 @@ h3.hello {
 h3.hello span {
 	font-family: 'Nova Square', cursive;
 	font-size: 30px;
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 	color: var(--skin-color);
 }
 h3.my-profession {
@@ -173,13 +183,13 @@ h3.my-profession {
 }
 .btn {
   font-size: 16px;
-  font-weight: 200;
+  font-weight: var(--font-weight-light);
   letter-spacing: 1px;
   padding: 13px 20px 13px;
   outline: 0;
   border: 1px solid var(--text-black-700);
 	color: #ffffff;
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
   cursor: pointer;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
@@ -228,7 +238,7 @@ h3.my-profession {
 .about .about-content .about-text h3 {
 	font-size: 24px;
 	margin-bottom: 15px;
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 	color: var(--text-black-900);
 }
 
@@ -254,7 +264,7 @@ h3.my-profession {
 }
 
 .about .about-content .personal-info .info-item p {
-	font-weight: 600;
+	font-weight: var(--font-weight-bold);
 	padding: 10px 0;
 	font-size: 16px;
 	color: var(--text-black-900);
@@ -262,7 +272,7 @@ h3.my-profession {
 }
 
 .about .about-content .personal-info .info-item p span {
-	font-weight: 400;
+	font-weight: var(--font-weight-light);
 	color: var(--text-black-700);
 	display: inline-block;
 	margin-left: 5px;
@@ -322,7 +332,7 @@ h3.my-profession {
 .about .about-content h3.title {
 	font-size: 24px;
 	margin-bottom: 30px;
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 	color: var(--text-black-900);
 }
 .about .about-content .timeline-box {
@@ -367,7 +377,7 @@ h3.my-profession {
 	background: var(--skin-color);
 }
 .about .about-content .timeline .timeline-date {
-	font-weight: 400;
+	font-weight: var(--font-weight-light);
 	font-size: 14px;
 	margin-bottom: 12px;
 	color: var(--text-black-700);
@@ -377,7 +387,7 @@ h3.my-profession {
 	margin-right: 5px;
 }
 .about .about-content .timeline .timeline-title {
-	font-weight: 700;
+	font-weight: var(--font-weight-bold);
 	font-size: 18px;
 	margin-bottom: 15px;
 	text-transform: capitalize;
@@ -391,3 +401,151 @@ h3.my-profession {
 	color: var(--text-black-700);
 }
 
+
+
+/* Portfolio */
+.portfolio .slider {
+	position: relative;
+	flex: 0 0 100%;
+	width: 100%;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 50px 40px 4px;
+	border-radius: 10px;
+}
+
+.portfolio .slider .slider-container {
+	overflow: hidden;
+	border-radius: 10px;
+}
+
+.portfolio .slider .slider-track {
+	display: flex;
+	transition: 0.5s;
+}
+
+.portfolio .slider .slider-item {
+	min-width: 100%;
+	height: 500px;
+	background-size: 100%;
+}
+.portfolio .slider .slider-item a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+.portfolio .slider .btn-prev,
+.portfolio .slider .btn-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	font-size: 20px;
+	background: var(--bg-black-100);
+	color: var(--text-black-900);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	opacity: .2;
+	border: none;
+	cursor: pointer;
+}
+
+.portfolio .slider .btn-prev {
+    left: 10px;
+}
+.portfolio .slider .btn-prev:hover,
+.portfolio .slider .btn-next:hover {
+	opacity: 1;
+}
+
+.portfolio .slider .btn-next {
+    right: 10px;
+}
+
+/* Contacts */
+.contact #tg-feedback {
+	flex: 0 0 75%;
+}
+
+.contact .contact-info-item {
+	display: flex;
+	text-align: center;
+	flex: 0 0 25%;
+}
+
+.contact .contact-info-item .icon {
+	display: inline-block;
+}
+
+.contact .contact-info-item .icon .fa {
+	font-size: 25px;
+	color: var(--skin-color);
+}
+
+/* form */
+.contact .contact-form {
+	flex: 0 0 100%;
+	max-width: 100%;
+	margin-top: 10px;
+}
+
+.contact .contact-form .col-6 {
+	flex: 0 0 50%;
+	min-width: 50%;
+}
+
+.contact .contact-form .col-12 {
+	flex: 0 0 100%;
+	min-width: 100%;
+}
+
+.contact .contact-form .form-item {
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.contact .contact-form .form-item .form-control {
+	width: 100%;
+	height: 50px;
+	border-radius: 4px;
+	background: var(--bg-black-100);
+	border: 1px solid var(--bg-black-50);
+	padding: 10px 25px;
+	font-size: 16px;
+	color: var(--text-black-700);
+	transition: all .3s ease;
+}
+
+.contact .contact-form .form-item .form-control:focus {
+	box-shadow: 0 0 20px var(--skin-color);
+}
+
+.contact .contact-form .form-item textarea.form-control {
+	height: 140px;
+}
+
+.contact.contact-form .btn {
+	height: 50%;
+	padding: 0 50px;
+}
+
+.contact .alert {
+	width: 200px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+.contact .alert i {
+	margin-left: 10px;
+}
+
+.contact .alert.alert-success {
+	display: none;
+	background: var(--skin-color);
+}
